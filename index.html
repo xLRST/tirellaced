@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tirellaced - Elaborazione Dati & Commercialisti</title>
-    <!-- Collegamento al file CSS esterno -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -18,7 +17,7 @@
                 <img src="logo.jpg" alt="Tirellaced Logo">
             </div>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#chi-siamo">Chi Siamo</a></li>
                     <li><a href="#servizi">Servizi</a></li>
                     <li><a href="#contatti">Contatti</a></li>
@@ -37,7 +36,7 @@
         </section>
 
         <!-- Servizi Section -->
-        <section id="servizi" class="section">
+        <section id="servizi" class="section bg-light">
             <div class="container">
                 <h1>Servizi</h1>
                 <div class="services">
@@ -62,10 +61,10 @@
             <div class="container">
                 <h1>Contatti</h1>
                 <p>Per maggiori informazioni, contattaci tramite:</p>
-                <ul>
-                    <li>Indirizzo: Via Esempio, 123, Roma</li>
-                    <li>Email: info@tirellaced.com</li>
-                    <li>Telefono: +39 0123 456 789</li>
+                <ul class="contact-info">
+                    <li><strong>Indirizzo:</strong> Via Esempio, 123, Roma</li>
+                    <li><strong>Email:</strong> info@tirellaced.com</li>
+                    <li><strong>Telefono:</strong> +39 0123 456 789</li>
                 </ul>
                 <form action="#" method="post">
                     <input type="text" name="nome" placeholder="Il tuo nome" required>
