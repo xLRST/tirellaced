@@ -13,13 +13,13 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <img src="logo.jpg" alt="Tirellaced Logo">
+            <div class="logo" style="text-align: center;">
+                <img src="logo.jpg" alt="Tirellaced Logo" style="max-width: 200px;">
             </div>
             <nav>
-                <ul class="nav-links">
-                    <li><a href="#chi-siamo">Chi Siamo</a></li>
+                <ul>
                     <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#chi-siamo">Chi Siamo</a></li>
                     <li><a href="#contatti">Contatti</a></li>
                 </ul>
             </nav>
@@ -27,16 +27,8 @@
     </header>
 
     <main>
-        <!-- Chi Siamo Section -->
-        <section id="chi-siamo" class="section">
-            <div class="container">
-                <h1>Chi Siamo</h1>
-                <p>Siamo un team di esperti in elaborazione dati e consulenza contabile. Forniamo soluzioni innovative e affidabili per supportare la crescita del tuo business.</p>
-            </div>
-        </section>
-
         <!-- Servizi Section -->
-        <section id="servizi" class="section bg-light">
+        <section id="servizi" class="section">
             <div class="container">
                 <h1>Servizi</h1>
                 <div class="services">
@@ -56,15 +48,44 @@
             </div>
         </section>
 
+        <!-- Chi Siamo Section -->
+        <section id="chi-siamo" class="section">
+            <div class="container">
+                <h1>Chi Siamo</h1>
+                <p>Siamo un team di esperti in elaborazione dati e consulenza contabile. Forniamo soluzioni innovative e affidabili per supportare la crescita del tuo business.</p>
+
+                <div class="slider">
+                    <div class="slide">
+                        <div class="card">
+                            <h2>Mario Rossi</h2>
+                            <p>CEO</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="card">
+                            <h2>Lucia Bianchi</h2>
+                            <p>Responsabile Marketing</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="card">
+                            <h2>Giuseppe Verdi</h2>
+                            <p>Analista Dati</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Contatti Section -->
         <section id="contatti" class="section">
             <div class="container">
                 <h1>Contatti</h1>
                 <p>Per maggiori informazioni, contattaci tramite:</p>
-                <ul class="contact-info">
-                    <li><strong>Indirizzo:</strong> Via Esempio, 123, Roma</li>
-                    <li><strong>Email:</strong> info@tirellaced.com</li>
-                    <li><strong>Telefono:</strong> +39 0123 456 789</li>
+                <ul>
+                    <li>Indirizzo: Via Esempio, 123, Roma</li>
+                    <li>Email: info@tirellaced.com</li>
+                    <li>Telefono: +39 0123 456 789</li>
                 </ul>
                 <form action="#" method="post">
                     <input type="text" name="nome" placeholder="Il tuo nome" required>
@@ -81,6 +102,22 @@
             <p>&copy; 2025 Tirellaced. Tutti i diritti riservati.</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript per lo slider
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showSlide() {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+            index = (index + 1) % slides.length;
+        }
+
+        setInterval(showSlide, 3000);
+        showSlide();
+    </script>
 </body>
 
 </html>
