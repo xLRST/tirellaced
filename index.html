@@ -103,21 +103,7 @@
         </div>
     </footer>
 
-    <script>
-        // JavaScript per lo slider
-        let slides = document.querySelectorAll('.slide');
-        let index = 0;
-
-        function showSlide() {
-            slides.forEach((slide, i) => {
-                slide.style.display = i === index ? 'block' : 'none';
-            });
-            index = (index + 1) % slides.length;
-        }
-
-        setInterval(showSlide, 3000);
-        showSlide();
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

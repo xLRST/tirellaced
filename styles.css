@@ -1,141 +1,135 @@
-/* Stili di base */
+/* File CSS aggiornato */
+
+/* Stile generale */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6;
     color: #333;
 }
 
 h1, h2 {
-    color: #0056b3;
+    color: #0056FF;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 /* Header */
 header {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 0;
+    background: #0056FF;
+    color: #fff;
+    padding: 20px 0;
 }
 
 header .logo img {
-    height: 100px;
+    display: block;
+    margin: 0 auto;
 }
 
-header nav {
+nav ul {
     display: flex;
-    justify-content: flex-end;
-}
-
-.nav-links {
+    justify-content: center;
     list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
     padding: 0;
+    margin: 10px 0 0;
 }
 
-.nav-links a {
-    color: white;
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
     font-weight: 700;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ffd700;
 }
 
 /* Sezioni */
 .section {
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
-.bg-light {
-    background-color: #f9f9f9;
+.section h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Servizi */
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 
 .service {
-    background: white;
+    background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .service:hover {
-    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Chi Siamo Slider */
+.slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Contatti */
-.contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-.contact-info li {
-    margin-bottom: 10px;
-}
-
 form {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-input, textarea, button {
+form input, form textarea, form button {
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
 }
 
-button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
+form button {
+    background: #0056FF;
+    color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #003f7f;
+form button:hover {
+    background: #0041cc;
 }
 
 /* Footer */
 footer {
-    background-color: #0056b3;
-    color: white;
+    background: #333;
+    color: #fff;
     text-align: center;
-    padding: 20px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
+    padding: 10px 0;
 }
